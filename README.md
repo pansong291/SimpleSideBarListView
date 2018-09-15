@@ -1,6 +1,6 @@
 # SimpleSideBarListView
   
-[![Travis](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)](LICENSE)  
+[![Travis](https://img.shields.io/badge/license-WTFPL-blue.svg)](LICENSE)  
 
 简单的首字母侧边导航栏，快速定位ListView的Item  
 
