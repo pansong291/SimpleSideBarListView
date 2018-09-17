@@ -59,6 +59,7 @@ public class SideBar extends View
   super.onDraw(canvas);
   int height = getHeight();// 获取对应高度
   int width = getWidth();// 获取对应宽度
+  int fontSize = width * 3 / 4;
   int singleHeight = height / charList.size();// 获取每一个字母的高度
   for (int i = 0; i < charList.size(); i++)
   {
@@ -66,16 +67,20 @@ public class SideBar extends View
    paint.setTypeface(Typeface.MONOSPACE);//Typeface.DEFAULT_BOLD);
    paint.setAntiAlias(true);
    paint.setFakeBoldText(true);
-   paint.setTextSize(30);
+   paint.setTextSize(fontSize);
    // 选中的状态
    if (i == choose)
    {
     paint.setColor(Color.parseColor("#4F41FD"));
-    paint.setTextSize(40);
+    if(fontSize + 10 <= width)
+     paint.setTextSize(fontSize + 10);
+    else paint.setTextSize(width);
    }
+   float ww = paint.measureText(String.valueOf(charList.get(i)));
+   float hh = paint.descent() - paint.ascent();
    // x坐标等于中间-字符串宽度的一半.
-   float xPos = width / 2 - paint.measureText(String.valueOf(charList.get(i))) / 2;
-   float yPos = singleHeight * i + singleHeight / 2;
+   float xPos = width / 2 - ww / 2;
+   float yPos = singleHeight * i + singleHeight / 2 + hh / 2;
    canvas.drawText(String.valueOf(charList.get(i)), xPos, yPos, paint);
    paint.reset();// 重置画笔
   }
