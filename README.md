@@ -10,5 +10,5 @@
 
 ## 效果图
 
-![ss0](../../raw/master/screenshots/simplesidebarlistview0.png)
-![ss1](https://github.com/pansong291/SimpleSideBarListView/raw/master/screenshots/simplesidebarlistview1.png)
+![ss0](https://pansong291.github.io/Pictures/github/pansong291/SimpleSideBarListView/simplesidebarlistview0.png)
+![ss1](https://pansong291.github.io/Pictures/github/pansong291/SimpleSideBarListView/simplesidebarlistview1.png)
